@@ -19,8 +19,8 @@ public class RestApi {
 
     @POST
     @Path("/menu")
-    public Response createMenu(CreateMenuCommand createMenuCommand) {
+    public ThanksgivingMenu createMenu(CreateMenuCommand createMenuCommand) {
         ThanksgivingMenu thanksgivingMenu = menuService.createMenu(createMenuCommand);
-        return Response.ok().build();
+        return thanksgivingMenu;
     }
 }
